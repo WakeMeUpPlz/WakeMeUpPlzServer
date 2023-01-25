@@ -11,7 +11,7 @@
 * 사용한 언어/툴 
 
   * front-end : kotlin/android studio (김아림,김아진)
-  * back-end : js, node-js/visual studio code, aws (최애림,김나영)
+  * back-end : mysql, node-js/visual studio code, aws (최애림,김나영)
 
 * 사용 라이브러리 
 
