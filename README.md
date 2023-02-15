@@ -1,50 +1,117 @@
-# 2022 K-디지털 챌린지 : NET 챌린지 캠프 시즌9 금상,특별상 수상작품 🏆
-## WHIPPING, 마트를 방문한 시각장애인들이 수월하게 장보도록 돕는 서비스🛒
-▼ 시연 영상 및 발표 자료 보러 가기 ▼
-https://drive.google.com/drive/folders/1tpcrK5ugG9sGLCYV-YfUUb9Ph1YSLuRl?usp=share_link
-## Skills
+# 2022 init 3기 팀프로젝트 WakeMeUpPlz⏰
 
-![image](https://user-images.githubusercontent.com/80438964/218960041-62528b7e-518e-43b4-b610-70569e02d27f.png)
+-----------------
+
+## 프로젝트 소개 ##
+
+기존의 알람 앱 기능에, 패턴 풀기 횟수 초과로 실패 시 지정한 도우미에게 문자를 전송하는 알람 애플리케이션입니다. 
+다양한 미션 수행 알람 애플리케이션이 있지만 도전 횟수가 무제한 이라는 점, 얼떨결에 문제를 해결하고 다시 잠들 수 있다는 문제점을 생각하다가, 미션에 횟수를 지정하고, 지정한 횟수 안에 미션을 해결하지 못하면 지정한 도우미에게 문자를 보내어 기상을 돕게하는 어플이 있으면 재미있을 것 같다고 생각했습니다.
+그래서 WakeMeUpPlz를 만들게 되었습니다. 일반적 기상 앱처럼 기상도우미 호출 없이 서비스를 사용할 수도 있고, 휴대전화 내 contact의 번호들을 자동으로 불러와 기상 도우미를 지정 가능하게 합니다.
 
 * 사용한 언어/툴 
 
-  * front-end : Java/android studio 
-  * back-end : mysql, node-js/visual studio code, Koren/PaaS-Ta
+  * front-end : kotlin/android studio (김아림,김아진)
+  * back-end : mysql, node-js/visual studio code, aws (최애림,김나영)
 
+* 사용 라이브러리 
 
-## Team: 마스킹(Masking) 🔮
-### Lead 
-* 최애림
-### FrontEnd 
-* 안드로이드 애플리케이션 개발
-    * 서민영: 바코드 인식, 장바구니 기능 구현
-    * 김채은: 음성 합성(TTS), 장바구니 기능 구현
-    *  최애림: 비콘 인식을 이용한 길안내 기능, 텍스트 인식, 음성 인식(STT), 음성 합성(TTS) 구현
-     * 곽도윤: 음성 합성(TTS), 비콘 인식을 이용한 길안내 기능 구현
+  * 패턴풀기 : https://github.com/l7naive/pattern-lock.git
+  * 클라이언트-서버 통신 : Retrofit2
 
-### BackEnd  
-* 데이터베이스 설계 및 구축: 곽도윤,김채은
-* 서버 개발: 김민경,최원경
+* API 문서
 
-### Design
-* 김민경
+  * https://apricot-airport-e27.notion.site/ae29fa290dae47d0b8f3cb8c97141562?v=c8b7dffe57824dd89a2081739844f7c7
 
-## Description
-## <위핑(WHIPPING)> 개발 목적 및 필요성
-우리는 장을 볼 때 많은 진열대, 많은 상품을 보며 제조사, 맛, 가격 등 여러 면을 고려하여 상품을 고른다. 하지만 시각장애인이 접근성이 좋지 않은 대형마트 안에서 누군가의 도움 없이 혼자 물건을 고르는 것은 매우 어려운 일이다. 진열대의 위치는 오로지 시각적으로만 제공되고, 점자 표기가 없는 상품이 많기 때문에 상품의 선택, 상품정보 확인 등은 직원의 도움이 없으면 스스로 문제를 해결하기가 쉽지 않다는 현실적인 어려움이 존재한다.
- 정부가 발표한 제5차 장애인 정책 종합계획에 따르면, 18년부터 5년간 장애인의 적극적인 사회 참여기회를 보장하고 장애인의 자립생활을 목표로 정책 계획을 수립하고 있다. 현재 제 5차 계획은‘장애인의 자립생활이 이루어지는 포용사회(Inclusive Society)’를 비전으로 사회 전 영역을 망라하는 5대 분야로 진행되고 있다. 그러나 이 정책 계획은 시각장애인이 필요한 물건과 서비스를 소비하고, 지역사회의 시설을 이용하는 것에서 겪게 되는 불편함을 간과한다. 마스킹 팀은 정책 계획의 허점을 인식하였고, 시각장애인의 생활 반경 확장과 삶의 질 향상을 위한 서비스를 개발하기로 기획하였다. 이에 따라 개인의 기본 생활에 직결되는 대형마트에서 시각장애인들이 자립적으로 장을 볼 수 있는 애플리케이션인 <위핑(Whipping)>을 개발하였다. 
+* 기능 
 
-## <위핑(WHIPPING)> 의 특징
- 해당 기술은 장애인에게 비장애인과 동등하게 매장 직접 방문을 통한 제품 구매 경험을 제공한다는 점에서 주목할 만하다. 기존 시각장애인들의 상품 구매는 주로 마트 직원과의 의사소통으로만 이루어졌다. 또한 본인이 무엇을 구매할지 미리 준비해 와 해당 제품만 가져가다 보니 비장애인이 매장을 둘러보며 얻을 수 있는 우연의 기회를 놓치게 된다. 매장을 직접 방문하여 제품을 자유롭게 구매할 수 있다면 현재 마트에 어떤 제품들이 진열되어 있는지, 행사 상품은 무엇인지 등 더 많은 정보를 얻을 수 있다. 또한 원하는 상품의 트렌드와 신제품이 무엇인지를 알 수 있어 능동적인 제품 구매뿐 아니라 비장애인과 장애인 사이 정보 불균형까지 해소할 수 있다. 더 나아가 이러한 시각장애인의 능동적인 구매는 자립적인 경제생활을 도모한다. 
- <위핑(Whipping)>은 장보기에 특화된 시각 보조 도구이다. 본 서비스는 마트의 카트에 부착할 수 있는 태블릿 PC를 이용하는 형식으로 지원되어 사용자의 접근성을 제고한다는 점에서 여타 서비스들보다 사용자 친화적이다.
- 본 서비스는 사용자가 실내인 마트에서의 본인의 위치를 비콘을 이용해 파악할 수 있다는 점에서 차별성이 있다. 비콘을 이용해 사용자에게 실시간으로 현재 위치를 알려주기 때문에 실내에서의 위치 파악이 어려운 GPS보다 사용자의 위치를 잘 파악할 수 있다는 점에서 혁신적이다. 이러한 기능은 차후에 대형마트 뿐 아니라 실내 시설의 범용적인 길 안내 서비스로서 발전할 가능성이 있다. 
+  * 회원가입, 로그인, 알람 추가, 삭제, 편집, 패턴풀기
 
-      
+* 개발 기간 
 
-
-
-
-
-
+  * 2022.12.23 ~ 2023.1.8
 
   
+
+## Server Part 소개 ##
+
+  ![WakeMeUpPlz서버파트pdf_page-0001](https://user-images.githubusercontent.com/80438964/212251840-641e3eb0-d5d0-46b6-8c15-94db6e265eb7.jpg)
+
+![WakeMeUpPlz서버파트pdf_page-0002](https://user-images.githubusercontent.com/80438964/212251854-3dbb9aa8-c793-4f4b-9f1c-15b41535fb05.jpg)
+
+- WakeMeUpPlz의 API서버는 자바스크립트 언어와 express프레임워크를 이용하여 구현하였습니다.
+  또한 AWS에서 제공하는 EC2를 이용하여 WakeMeUPPlz 서버를 배포하였으며 RDS를 이용하여 WakeMeUpPlz DB서버를 대여하여 MySql과 연동시켰습니다.
+
+  
+
+  ![WakeMeUpPlz서버파트pdf_page-0003](https://user-images.githubusercontent.com/80438964/212251862-33810545-4147-4393-8ff8-1623c7249474.jpg)
+
+- WakeMeUpPlz 데이터 베이스는 회원, 알람 릴레이션으로 이루어져있으며 ERD를 작성하였습니다.
+
+  
+
+![WakeMeUpPlz서버파트pdf_page-0004](https://user-images.githubusercontent.com/80438964/212251864-11394e0c-ea8f-460b-9ce0-5ae6196c153a.jpg)
+
+- 릴레이션스키마와 테이블 명세서를 작성하여 WakeMeUpPlz DB를 생성하였습니다.
+
+  
+
+![WakeMeUpPlz서버파트pdf_page-0005](https://user-images.githubusercontent.com/80438964/212251866-9ecf9a6d-b0fd-42a5-aa3b-4dc9636127a0.jpg)
+
+- AWS의 RDS를 이용해 WakeMeUpPlz DB서버를 생성하여 MySQL과 Node.js서버와 연결하였습니다.
+
+  
+
+![WakeMeUpPlz서버파트pdf_page-0006](https://user-images.githubusercontent.com/80438964/212251872-4e82281e-53e3-4764-a40a-36d067482470.jpg)
+
+- 유저테이블과 알람테이블의 저장된 데이터를 가공하여 가져오는 쿼리를 작성하였습니다.
+
+  
+
+![WakeMeUpPlz서버파트pdf_page-0007](https://user-images.githubusercontent.com/80438964/212251875-a71d8260-c2cd-418b-ab30-d6502db32972.jpg)
+
+- 불러온 데이터들을 이용하여 로그인, 회원가입기능을 구현하였습니다.
+
+  
+
+![WakeMeUpPlz서버파트pdf_page-0008](https://user-images.githubusercontent.com/80438964/212251878-54e8a0ac-6d32-4f7a-837a-654580f417dc.jpg)
+
+- WakeMeUpPlz회원의 알람리스트 보여주기, 알람 수정, 알람 저장, 알람 삭제 기능을 구현하였습니다.
+
+  
+
+![WakeMeUpPlz서버파트pdf_page-0009](https://user-images.githubusercontent.com/80438964/212251879-491f7fef-0bd1-4321-b0b8-d79a647da758.jpg)
+
+- 모델은 User, Alarm이 있으며, 요청에 대하여 서비스와 매핑해주는 controller 로직과
+  이를 DB가 필요한 서비스의 경우 storage를 두어서 처리하여 메인로직과 DB로직을 분리하였습니다.
+
+  
+
+![WakeMeUpPlz서버파트pdf_page-0010](https://user-images.githubusercontent.com/80438964/212251882-7f05cdd9-58b7-4c02-8e29-8d9b56f845b8.jpg)
+
+- 이러한 API들은 클라이언트 파트담당한 팀원들이 알기 쉽도록 API문서를 작성하였습니다. 
+
+  
+
+![WakeMeUpPlz서버파트pdf_page-0011](https://user-images.githubusercontent.com/80438964/212251883-79a80cf5-211c-4293-8ec4-9a78da45db82.jpg)
+
+- API문서에는 PostMan을 이용하여 예시를 첨부하여 클라이언트 팀원들이 최대한 알아보기 쉽게 하였습니다.
+
+  
+
+![WakeMeUpPlz서버파트pdf_page-0012](https://user-images.githubusercontent.com/80438964/212251884-e8e3f3a5-7702-48b9-bbab-92da4d18af37.jpg)
+
+- 만든 api를 안드로이드 개발 팀원들이 사용하기 위해서는 서버를 배포해주어야 했기 때문에 AWS의 EC2를 이용하여 서버를 배포하였습니다.
+
+
+
+## 🍀실행영상 
+
+![합친 영상(2배속) (1)](https://user-images.githubusercontent.com/80438964/212256763-0e586119-57e6-49aa-ab53-9c791e9383fd.gif)
+
+
+
+WakeMeUpPlz 시연영상 링크 : https://youtu.be/1RYlXOUvh8I (알람 소리를 확인할 수 있습니다.)
+
+## 🍀소감
+
+처음 백엔드를 담당하여 걱정이 많았지만, 이러한 걱정들은 백엔드 담당 팀원과 데이터베이스를 설계하고, 클라이언트 담당 팀원들과 협의하여 API를 구현한 후, 서버를 배포하는 일련의 과정에서 다양한 사람들과 소통하면서 개발하는 것에 대한 흥미와 즐거움으로 해소될 수 있었습니다. 서버를 처음 공부하고, 실습해보면서 서버개발자로서 진로를 경험해 볼 수 있었던 의미있는 프로젝트였습니다.
